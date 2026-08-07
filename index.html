@@ -318,11 +318,12 @@
         }
       }
 
+      // Manual join form configured to opt out 'admin' username; strictly email-based verification
       const user = {
         username: usernameInput,
         email: null,
         picture: avatarUrl,
-        isAdmin: usernameInput.toLowerCase() === 'admin'
+        isAdmin: false
       };
       saveUserSession(user);
     }
